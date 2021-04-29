@@ -6,10 +6,34 @@
 //
 
 import SwiftUI
+import VisionKit
+import Vision
 
 struct ContentView: View {
+    @State var isScanned = false
+    @State var text = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Hello, World!")
+                
+                Button(action: {
+                    isScanned.toggle()
+                }) {
+                    Text("Button")
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $isScanned, content: {
+            ScannerView(completion: { textPerPage in
+                if let text = textPerPage {
+                    self.text = text
+                }
+                isScanned = false
+            })
+                .ignoresSafeArea()
+        })
     }
 }
 

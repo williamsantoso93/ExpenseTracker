@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,15 @@
 		7A3F452725D9303D006158B2 /* ExpenseTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F452625D9303D006158B2 /* ExpenseTrackerTests.swift */; };
 		7A3F453225D9303D006158B2 /* ExpenseTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F453125D9303D006158B2 /* ExpenseTrackerUITests.swift */; };
 		7A3F454625D930BC006158B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F454525D930BC006158B2 /* ContentView.swift */; };
+		7A3F455325D932A1006158B2 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F455225D932A1006158B2 /* ScannerView.swift */; };
+		7A3F455825D935ED006158B2 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3F455725D935ED006158B2 /* ScanView.swift */; };
+		7A787787263AA55D0038C34D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A787786263AA55D0038C34D /* Model.swift */; };
+		7A787789263AAA0B0038C34D /* TestSaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A787788263AAA0B0038C34D /* TestSaveView.swift */; };
+		7A78778D263AAA3C0038C34D /* AddRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78778C263AAA3C0038C34D /* AddRecordViewModel.swift */; };
+		7A787790263ABDA40038C34D /* PrefilledData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78778F263ABDA40038C34D /* PrefilledData.swift */; };
+		7A787792263AC4430038C34D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A787791263AC4430038C34D /* Extension.swift */; };
+		7ABB1597263AA4AF00DD41EC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABB1596263AA4AF00DD41EC /* Realm */; };
+		7ABB1599263AA4AF00DD41EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABB1598263AA4AF00DD41EC /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,13 @@
 		7A3F453125D9303D006158B2 /* ExpenseTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerUITests.swift; sourceTree = "<group>"; };
 		7A3F453325D9303D006158B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3F454525D930BC006158B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A3F455225D932A1006158B2 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		7A3F455725D935ED006158B2 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		7A787786263AA55D0038C34D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7A787788263AAA0B0038C34D /* TestSaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSaveView.swift; sourceTree = "<group>"; };
+		7A78778C263AAA3C0038C34D /* AddRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordViewModel.swift; sourceTree = "<group>"; };
+		7A78778F263ABDA40038C34D /* PrefilledData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefilledData.swift; sourceTree = "<group>"; };
+		7A787791263AC4430038C34D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABB1599263AA4AF00DD41EC /* RealmSwift in Frameworks */,
+				7ABB1597263AA4AF00DD41EC /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +164,9 @@
 			children = (
 				7A3F454525D930BC006158B2 /* ContentView.swift */,
 				7A3F451125D9303B006158B2 /* ContentView1.swift */,
+				7A3F455225D932A1006158B2 /* ScannerView.swift */,
+				7A3F455725D935ED006158B2 /* ScanView.swift */,
+				7A78778E263AAE980038C34D /* Test */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +174,8 @@
 		7A3F454B25D930D2006158B2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7A78778F263ABDA40038C34D /* PrefilledData.swift */,
+				7A787791263AC4430038C34D /* Extension.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -160,6 +183,7 @@
 		7A3F454D25D930E6006158B2 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A78778C263AAA3C0038C34D /* AddRecordViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -167,8 +191,17 @@
 		7A3F454E25D930ED006158B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A787786263AA55D0038C34D /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7A78778E263AAE980038C34D /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				7A787788263AAA0B0038C34D /* TestSaveView.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +220,10 @@
 			dependencies = (
 			);
 			name = ExpenseTracker;
+			packageProductDependencies = (
+				7ABB1596263AA4AF00DD41EC /* Realm */,
+				7ABB1598263AA4AF00DD41EC /* RealmSwift */,
+			);
 			productName = ExpenseTracker;
 			productReference = 7A3F450C25D9303B006158B2 /* ExpenseTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 7A3F450325D9303B006158B2;
+			packageReferences = (
+				7ABB1595263AA4AF00DD41EC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 7A3F450D25D9303B006158B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,11 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A787789263AAA0B0038C34D /* TestSaveView.swift in Sources */,
+				7A3F455825D935ED006158B2 /* ScanView.swift in Sources */,
 				7A3F451925D9303D006158B2 /* Persistence.swift in Sources */,
+				7A787792263AC4430038C34D /* Extension.swift in Sources */,
+				7A78778D263AAA3C0038C34D /* AddRecordViewModel.swift in Sources */,
 				7A3F454625D930BC006158B2 /* ContentView.swift in Sources */,
 				7A3F451225D9303B006158B2 /* ContentView1.swift in Sources */,
+				7A3F455325D932A1006158B2 /* ScannerView.swift in Sources */,
 				7A3F451025D9303B006158B2 /* ExpenseTrackerApp.swift in Sources */,
 				7A3F451C25D9303D006158B2 /* ExpenseTracker.xcdatamodeld in Sources */,
+				7A787787263AA55D0038C34D /* Model.swift in Sources */,
+				7A787790263ABDA40038C34D /* PrefilledData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +671,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7ABB1595263AA4AF00DD41EC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7ABB1596263AA4AF00DD41EC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7ABB1595263AA4AF00DD41EC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		7ABB1598263AA4AF00DD41EC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7ABB1595263AA4AF00DD41EC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7A3F451A25D9303D006158B2 /* ExpenseTracker.xcdatamodeld */ = {

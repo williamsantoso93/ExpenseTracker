@@ -13,7 +13,7 @@ struct ExpenseTrackerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TestSaveView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
